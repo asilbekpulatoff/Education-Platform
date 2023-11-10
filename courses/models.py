@@ -51,7 +51,7 @@ class Content(models.Model):
                                     ('text', 'video', 'image', 'file')})
     object_id = models.PositiveIntegerField()
     item = GenericForeignKey('content_type', 'object_id')
-    order = OrderField(blank=True, for_fields=['content'])
+    order = OrderField(blank=True, for_fields=['module'])
 
     class Meta:
         ordering = ['order']
